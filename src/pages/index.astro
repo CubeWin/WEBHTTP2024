@@ -1,76 +1,453 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import BtnOutline from '../components/BtnOutline.astro'
+import BtnRed from '../components/BtnRed.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<div class="p-5 bg-teal-400 my-5 rounded">
-			<p>Hola mundo</p>
-		</div>
-	</main>
+<Layout title='Welcome to Astro.'>
+    <main class='text-left container mx-auto'>
+        <h1>
+            <span class=''>Hola,</span>
+            <span class='text-gradient text-7xl !py-5'>Soy Eliud</span>
+            <span class='text-3xl'>Desarrollador Fullstack</span>
+            <span class='text-2xl font-normal'>Perú - Lima</span>
+        </h1>
+        <p class='!inline'>
+            +5 años de experiencia, <strong class='!inline text-yellow-500'>Ingeniero en Sistemas e Informática</strong>, enfocado en
+            compartir y obtener nuevos conocimientos, decidido a formar parte de un equipo para lograr los objetivos con los resultados
+            deseados.
+        </p>
+        <div class='w-full !flex justify-center items-center my-5'>
+            <BtnOutline body='Curriculúm Vitae' />
+        </div>
+        <div class='!flex justify-center items-center gap-8'>
+            <BtnRed body='Twitter'><i>I</i></BtnRed>
+            <BtnRed body='Github'><i>I</i></BtnRed>
+            <BtnRed body='Linkedin'><i>I</i></BtnRed>
+        </div>
+    </main>
+    <section class='text-white container mx-auto'>
+        <h2 class='text-3xl font-bold text-yellow-500 mb-5'>Experiencia Laboral</h2>
+        <div class='mb-10'>
+            <div
+                class='relative mx-12 before:absolute before:left-[-35px]
+            before:block before:h-full before:border-l-2 before:border-black/20
+            dark:before:border-white/15 before:content-[""]'
+            >
+                <span class='bg-yellow-500 -left-[41px] top-2 absolute rounded-full !h-[15px] !w-[15px]'></span>
+                <div class='mb-2'>
+                    <h3 class='!inline text-xl'><span class='!inline font-bold'>Desarrollador Fullstack</span> en Altamira Tecnology</h3>
+                    <span class='italic'>Enero 2023 - Actualmente (1 año 4 meses)</span>
+                </div>
+                <p class='pb-5'>
+                    Liderar un equipo de desarrollo, evangelizar conceptos claves para un desarrollo robusto y escalable, compartir mi
+                    conocimiento para acelerar el crecimiento de los miembros y crear un ambiente de propuestas que mejoren al equipo.
+                    Definir el diseño de base de datos, el entorno de desarrollo para el backend y frontend, las políticas para el
+                    desarrollo, la distribución de tareas y el despliegue en SAP BTP Cloud Foundry. Asimismo, asistir con la optimización de
+                    base de datos MySQL, actualización de estadísticas, índex, seguimiento a slow_query_log, tareas programadas, etc.
+                </p>
+            </div>
+            <div
+                class='relative mx-12 before:absolute before:left-[-35px]
+            before:block before:h-full before:border-l-2 before:border-black/20
+            dark:before:border-white/15 before:content-[""]'
+            >
+                <span class='bg-yellow-500 -left-[41px] top-2 absolute rounded-full !h-[15px] !w-[15px]'></span>
+                <div class='title mb-2'>
+                    <h3 class='!inline text-xl'><span class='!inline font-bold'>Desarrollador Fullstack</span> en Altamira Tecnology</h3>
+                    <span class='italic'>Enero 2023 - Actualmente (1 año 4 meses)</span>
+                </div>
+                <p class='pb-5'>
+                    Liderar un equipo de desarrollo, evangelizar conceptos claves para un desarrollo robusto y escalable, compartir mi
+                    conocimiento para acelerar el crecimiento de los miembros y crear un ambiente de propuestas que mejoren al equipo.
+                    Definir el diseño de base de datos, el entorno de desarrollo para el backend y frontend, las políticas para el
+                    desarrollo, la distribución de tareas y el despliegue en SAP BTP Cloud Foundry. Asimismo, asistir con la optimización de
+                    base de datos MySQL, actualización de estadísticas, índex, seguimiento a slow_query_log, tareas programadas, etc.
+                </p>
+            </div>
+            <div
+                class='relative mx-12 before:absolute before:left-[-35px]
+            before:block before:h-full before:border-l-2 before:border-black/20
+            dark:before:border-white/15 before:content-[""]'
+            >
+                <span class='bg-yellow-500 -left-[41px] top-2 absolute rounded-full !h-[15px] !w-[15px]'></span>
+                <div class='title mb-2'>
+                    <h3 class='!inline text-xl'><span class='!inline font-bold'>Desarrollador Fullstack</span> en Altamira Tecnology</h3>
+                    <span class='italic'>Enero 2023 - Actualmente (1 año 4 meses)</span>
+                </div>
+                <p class='pb-5'>
+                    Liderar un equipo de desarrollo, evangelizar conceptos claves para un desarrollo robusto y escalable, compartir mi
+                    conocimiento para acelerar el crecimiento de los miembros y crear un ambiente de propuestas que mejoren al equipo.
+                    Definir el diseño de base de datos, el entorno de desarrollo para el backend y frontend, las políticas para el
+                    desarrollo, la distribución de tareas y el despliegue en SAP BTP Cloud Foundry. Asimismo, asistir con la optimización de
+                    base de datos MySQL, actualización de estadísticas, índex, seguimiento a slow_query_log, tareas programadas, etc.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class='text-white container mx-auto'>
+        <h2 class='text-3xl font-bold text-yellow-500 mb-5'>Proyectos</h2>
+        <div class='!grid grid-cols-2 gap-4 mb-10'>
+            <img class='!w-full !h-auto' src='/svgl 1.png' alt='image' />
+            <div class=''>
+                <h3 class='text-2xl font-bold mb-2'>CRUD Básico</h3>
+                <p class='mb-2'>
+                    Es una aplicación básica que representa las funciones principales en un desarrollo de sistemas: "create, register,
+                    update and delete".
+                </p>
+                <div class='skills'>
+                    <h4 class='font-semibold'>Herramientas</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >HTML</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >CSS</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >JavaScript</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >JWT</span
+                        >
+                    </div>
+                </div>
+                <div class='Credenciales'>
+                    <h4 class='font-semibold'>Credenciales</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <span class='rounded px-3 py-1 bg-sky-500 text-white text-sm font-semibold !flex justify-center items-center'
+                            >Admin</span
+                        >
+                        <span class='rounded px-3 py-1 bg-sky-500 text-white text-sm font-semibold !flex justify-center items-center'
+                            >2321</span
+                        >
+                    </div>
+                </div>
+                <div class='Links'>
+                    <h4 class='font-semibold'>Links:</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <a
+                            class='rounded px-3 py-1 cursor-pointer border border-sky-500 bg-transparent hover:bg-sky-500 transition-colors duration-500 ease-in-out text-white text-sm font-semibold !flex justify-center items-center'
+                            >Código Fuente</a
+                        >
+                        <a
+                            class='rounded px-3 py-1 cursor-pointer border border-sky-500 bg-transparent hover:bg-sky-500 transition-colors duration-500 ease-in-out text-white text-sm font-semibold !flex justify-center items-center'
+                            >Demo</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='!grid grid-cols-2 gap-4 mb-10'>
+            <img class='!w-full !h-auto' src='/svgl 1.png' alt='image2' />
+            <div class=''>
+                <h3 class='text-2xl font-bold mb-2'>CRUD Básico</h3>
+                <p class='mb-2'>
+                    Es una aplicación básica que representa las funciones principales en un desarrollo de sistemas: "create, register,
+                    update and delete".
+                </p>
+                <div class='skills'>
+                    <h4 class='font-semibold'>Herramientas</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >HTML</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >CSS</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >JavaScript</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >JWT</span
+                        >
+                    </div>
+                </div>
+                <div class='Credenciales'>
+                    <h4 class='font-semibold'>Credenciales</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <span class='rounded px-3 py-1 bg-sky-500 text-white text-sm font-semibold !flex justify-center items-center'
+                            >Admin</span
+                        >
+                        <span class='rounded px-3 py-1 bg-sky-500 text-white text-sm font-semibold !flex justify-center items-center'
+                            >2321</span
+                        >
+                    </div>
+                </div>
+                <div class='Links'>
+                    <h4 class='font-semibold'>Links:</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <a
+                            class='rounded px-3 py-1 cursor-pointer border border-sky-500 bg-transparent hover:bg-sky-500 transition-colors duration-500 ease-in-out text-white text-sm font-semibold !flex justify-center items-center'
+                            >Código Fuente</a
+                        >
+                        <a
+                            class='rounded px-3 py-1 cursor-pointer border border-sky-500 bg-transparent hover:bg-sky-500 transition-colors duration-500 ease-in-out text-white text-sm font-semibold !flex justify-center items-center'
+                            >Demo</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='!grid grid-cols-2 gap-4 mb-10'>
+            <img class='!w-full !h-auto' src='/svgl 1.png' alt='image3' />
+            <div class=''>
+                <h3 class='text-2xl font-bold mb-2'>CRUD Básico</h3>
+                <p class='mb-2'>
+                    Es una aplicación básica que representa las funciones principales en un desarrollo de sistemas: "create, register,
+                    update and delete".
+                </p>
+                <div class='skills'>
+                    <h4 class='font-semibold'>Herramientas</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >HTML</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >CSS</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >JavaScript</span
+                        >
+                        <span class='rounded px-3 py-1 bg-red-700 text-white text-sm font-semibold !flex justify-center items-center'
+                            >JWT</span
+                        >
+                    </div>
+                </div>
+                <div class='Credenciales'>
+                    <h4 class='font-semibold'>Credenciales</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <span class='rounded px-3 py-1 bg-sky-500 text-white text-sm font-semibold !flex justify-center items-center'
+                            >Admin</span
+                        >
+                        <span class='rounded px-3 py-1 bg-sky-500 text-white text-sm font-semibold !flex justify-center items-center'
+                            >2321</span
+                        >
+                    </div>
+                </div>
+                <div class='Links'>
+                    <h4 class='font-semibold'>Links:</h4>
+                    <div class='!flex gap-2 my-2'>
+                        <a
+                            class='rounded px-3 py-1 cursor-pointer border border-sky-500 bg-transparent hover:bg-sky-500 transition-colors duration-500 ease-in-out text-white text-sm font-semibold !flex justify-center items-center'
+                            >Código Fuente</a
+                        >
+                        <a
+                            class='rounded px-3 py-1 cursor-pointer border border-sky-500 bg-transparent hover:bg-sky-500 transition-colors duration-500 ease-in-out text-white text-sm font-semibold !flex justify-center items-center'
+                            >Demo</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='text-white container mx-auto'>
+        <h2 class='text-3xl font-bold text-yellow-500 mb-8'>Habilidades Actuales</h2>
+        <div
+            class='bg-white bg-opacity-10 rounded-lg px-3 py-2 mb-10 shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)]'
+        >
+            <h3 class='font-semibold text-2xl mb-5'>FrontEnd</h3>
+            <div class='content !grid grid-cols-4 gap-2'>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class='bg-white bg-opacity-10 rounded-lg px-3 py-2 mb-10 shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)]'
+        >
+            <h3 class='font-semibold text-2xl mb-5'>BackEnd</h3>
+            <div class='content !grid grid-cols-4 gap-2'>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class='bg-white bg-opacity-10 rounded-lg px-3 py-2 mb-10 shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)]'
+        >
+            <h3 class='font-semibold text-2xl mb-5'>Base de datos</h3>
+            <div class='content !grid grid-cols-4 gap-2'>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+                <div class='w-full !flex justify-center items-center flex-col'>
+                    <img src='/image 3.png' alt='imagen' class='h-[80px] mb-2' />
+                    <p class='font-bold text-sm'>HTML 5</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class='bg-white bg-opacity-10 rounded-lg px-3 py-2 mb-10 shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)]'
+        >
+            <h3 class='font-semibold text-2xl mb-5'>Despliegue</h3>
+            <div class='content !flex flex-wrap justify-start items-center'>
+                <div
+                    class='py-3 my-[25px] mx-[15px] !w-[100px] !h-[130px] border-2 border-opacity-10 border-neutral-50 rounded-lg !flex justify-between items-center flex-col'
+                >
+                    <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                    <p class='font-bold text-base'>HTML 5</p>
+                </div>
+                <div
+                    class='py-3 my-[25px] mx-[15px] !w-[100px] !h-[130px] border-2 border-opacity-10 border-neutral-50 rounded-lg !flex justify-between items-center flex-col'
+                >
+                    <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                    <p class='font-bold text-base'>HTML 5</p>
+                </div>
+                <div
+                    class='py-3 my-[25px] mx-[15px] !w-[100px] !h-[130px] border-2 border-opacity-10 border-neutral-50 rounded-lg !flex justify-between items-center flex-col'
+                >
+                    <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                    <p class='font-bold text-base'>HTML 5</p>
+                </div>
+                <div
+                    class='py-3 my-[25px] mx-[15px] !w-[100px] !h-[130px] border-2 border-opacity-10 border-neutral-50 rounded-lg !flex justify-between items-center flex-col'
+                >
+                    <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                    <p class='font-bold text-base'>HTML 5</p>
+                </div>
+                <div
+                    class='py-3 my-[25px] mx-[15px] !w-[100px] !h-[130px] border-2 border-opacity-10 border-neutral-50 rounded-lg !flex justify-between items-center flex-col'
+                >
+                    <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                    <p class='font-bold text-base'>HTML 5</p>
+                </div>
+                <div
+                    class='py-3 my-[25px] mx-[15px] !w-[100px] !h-[130px] border-2 border-opacity-10 border-neutral-50 rounded-lg !flex justify-between items-center flex-col'
+                >
+                    <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                    <p class='font-bold text-base'>HTML 5</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='text-white container mx-auto text-center'>
+        <h2 class='text-3xl font-bold text-white mb-8'>Esta página WEB es realizo con:</h2>
+        <div class='content !flex flex-wrap justify-center items-center'>
+            <div class='py-3 my-[25px] mx-[15px] bg-white rounded !w-[100px] !h-[130px] !flex justify-between items-center flex-col'>
+                <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                <p class='text-slate-700 font-bold text-base'>HTML 5</p>
+            </div>
+            <div class='py-3 my-[25px] mx-[15px] bg-white rounded !w-[100px] !h-[130px] !flex justify-between items-center flex-col'>
+                <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                <p class='text-slate-700 font-bold text-base'>HTML 5</p>
+            </div>
+            <div class='py-3 my-[25px] mx-[15px] bg-white rounded !w-[100px] !h-[130px] !flex justify-between items-center flex-col'>
+                <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                <p class='text-slate-700 font-bold text-base'>HTML 5</p>
+            </div>
+            <div class='py-3 my-[25px] mx-[15px] bg-white rounded !w-[100px] !h-[130px] !flex justify-between items-center flex-col'>
+                <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                <p class='text-slate-700 font-bold text-base'>HTML 5</p>
+            </div>
+            <div class='py-3 my-[25px] mx-[15px] bg-white rounded !w-[100px] !h-[130px] !flex justify-between items-center flex-col'>
+                <img src='/image 3.png' alt='imagen' class='w-[50px] h-[50px]' />
+                <p class='text-slate-700 font-bold text-base'>HTML 5</p>
+            </div>
+        </div>
+        <div>
+            <a href=''>Revisar Código</a>
+        </div>
+    </section>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    * {
+        display: block;
+    }
+
+    main {
+        padding: 1rem;
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .astro-a {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 220px;
+        height: auto;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 1em;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .instructions {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .instructions code {
+        font-size: 0.8em;
+        font-weight: bold;
+        background: rgba(var(--accent-light), 12%);
+        color: rgb(var(--accent-light));
+        border-radius: 4px;
+        padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+        color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
 </style>

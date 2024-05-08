@@ -1,0 +1,18 @@
+---
+interface Props {
+  body: string
+}
+
+const { body } = Astro.props
+---
+
+<a
+  class='flex justify-center items-center w-[200px] h-[55px] border-2 border-gray-400 bg-transparent text-yellow-500 rounded-full text-base font-bold cursor-pointer shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)]
+          transition-all duration-500 ease-in-out hover:shadow-[-6px_-6px_12px_rgba(0,0,0,0.4),8px_8px_16px_rgba(86,131,180,0.6)] hover:border-yellow-500
+          active:ring-4 active:ring-yellow-500 active:ring-opacity-60'
+>
+  {body}
+</a>
+
+<style></style>
+<!-- shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)] -->
