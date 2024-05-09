@@ -1,0 +1,15 @@
+---
+interface Props {
+    color: string
+    bg: string
+    text: string
+}
+
+const { bg, color, text } = Astro.props
+---
+
+<span
+    class=`rounded px-3 py-1 ${bg} ${color} text-sm font-semibold !flex justify-center items-center`
+>
+    {text}
+</span>

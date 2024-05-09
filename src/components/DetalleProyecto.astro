@@ -1,0 +1,18 @@
+---
+import Tag from '../components/Tag.astro'
+interface Props {
+    title: string
+    items: string
+    bg: string
+    color: string
+}
+const { title, items, bg, color } = Astro.props
+const listItems = items.split(',')
+---
+
+<div>
+    <h4 class='font-semibold'>{title}</h4>
+    <div class='flex gap-2 my-2'>
+        {listItems.map((item) => <Tag bg={bg} color={color} text={item} />)}
+    </div>
+</div>

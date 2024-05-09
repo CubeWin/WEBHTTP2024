@@ -1,0 +1,47 @@
+---
+import Tag from '../components/Tag.astro'
+import TagLink from '../components/TagLink.astro'
+import DetalleProyecto from '../components/DetalleProyecto.astro'
+---
+
+<div class='!grid grid-cols-1 gap-4 mb-10'>
+    <img class='!w-full !h-auto' src='/svgl 1.png' alt='image' />
+    <div class=''>
+        <h3 class='text-2xl font-bold mb-2'>CRUD Básico</h3>
+        <p class='mb-2'>
+            Es una aplicación básica que representa las funciones principales en
+            un desarrollo de sistemas: "create, register, update and delete".
+        </p>
+        <DetalleProyecto
+            bg='bg-red-700'
+            color='text-white'
+            items='HTML,CSS,JavaScript,JWT'
+            title='Herramientas'
+        />
+        <DetalleProyecto
+            bg='bg-sky-500'
+            color='text-white'
+            items='Admin,2321'
+            title='Credenciales'
+        />
+        <div class='Links'>
+            <h4 class='font-semibold'>Links:</h4>
+            <div class='!flex gap-2 my-2'>
+                <TagLink
+                    bg='bg-sky-500'
+                    border='border-sky-500'
+                    color='text-white'
+                    text='Código Fuente'
+                    url=''
+                />
+                <TagLink
+                    bg='bg-sky-500'
+                    border='border-sky-500'
+                    color='text-white'
+                    text='Demo'
+                    url=''
+                />
+            </div>
+        </div>
+    </div>
+</div>

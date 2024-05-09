@@ -7,7 +7,7 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='es'>
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='description' content='Astro description' />
@@ -17,7 +17,7 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="bg_web"></div>
+		<div class="bg_web p-0 m-0 !h-0"></div>
 		<slot />
 	</body>
 </html>
@@ -35,16 +35,5 @@ const { title } = Astro.props
 		height: 100vh;
 		background: radial-gradient(circle, rgba(0, 103, 188, 1) 0%, rgba(50, 68, 130, 1) 51%, rgb(10, 8, 19) 100%);
 		z-index: -1;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 </style>
