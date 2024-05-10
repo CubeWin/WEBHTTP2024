@@ -12,11 +12,12 @@ const { bg, color, text, border, url, icon } = Astro.props
 ---
 
 <a
-    class=`rounded px-3 py-1 cursor-pointer border ${border} bg-transparent
-    hover:${bg} transition-colors duration-500 ease-in-out ${color} text-sm
+    class=`rounded px-3 py-1 cursor-pointer border ${border} bg-transparent hover:!${bg}
+    transition-colors duration-500 ease-in-out ${color} text-sm
     font-semibold !flex justify-center items-center`
-    href=`${url}`
+    href={url}
 >
-    {!!icon && <i class={icon} />}
+    {!!icon && <><i class=`fa ${icon}`></i>&nbsp;</>}
     {text}
 </a>
+<!-- `fa ${icon}` -->

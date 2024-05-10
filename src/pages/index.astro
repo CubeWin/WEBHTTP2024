@@ -6,34 +6,40 @@ import BtnRed from '../components/BtnRed.astro'
 import ExpLaboral from '../components/ExpLaboral.astro'
 import Proyecto from '../components/Proyecto.astro'
 import HabilidadesIn from '../components/HabilidadesIn.astro'
+import SectionWith from '../components/SectionWith.astro'
 import 'normalize.css'
 ---
 
 <Layout title='Welcome to Astro.'>
     <main class='text-left container mx-auto p-1 px-4 text-white text-xl'>
-        <h1 class="text-5xl font-bold">
+        <h1 class='text-5xl font-bold'>
             <span class='block'>Hola,</span>
-            <span class='block text-gradient text-7xl !py-5'>Soy Eliud</span>
+            <span
+                class='block text-7xl py-5 bg-clip-text text-transparent bg-gradient-to-r
+                from-amber-600 from-0% via-yellow-500 via-30% to-yellow-500 to-90%'
+            >
+                Soy Eliud
+            </span>
             <span class='block text-3xl'>Desarrollador Fullstack</span>
             <span class='block text-2xl font-normal'>Perú - Lima</span>
         </h1>
         <p>
-            +5 años de experiencia, <strong class='text-yellow-500'
-                >Ingeniero en Sistemas e Informática</strong
-            >, enfocado en compartir y obtener nuevos conocimientos, decidido a
-            formar parte de un equipo para lograr los objetivos con los
-            resultados deseados.
+            +5 años de experiencia, <strong class='text-yellow-500'>
+                Ingeniero en Sistemas e Informática
+            </strong>, enfocado en compartir y obtener nuevos conocimientos,
+            decidido a formar parte de un equipo para lograr los objetivos con
+            los resultados deseados.
         </p>
         <div class='w-full !flex justify-center items-center my-5'>
-            <BtnOutline body='Curriculúm Vitae' />
+            <BtnOutline body='Curriculúm Vitae' url='' icon='fa-file-text'/>
         </div>
         <div class='!flex justify-center items-center gap-8'>
-            <BtnRed body='Twitter'><i>I</i></BtnRed>
-            <BtnRed body='Github'><i>I</i></BtnRed>
-            <BtnRed body='Linkedin'><i>I</i></BtnRed>
+            <BtnRed body='Twitter'><i class="fa fa-twitter fa-4x"></i></BtnRed>
+            <BtnRed body='Github'><i class="fa fa-github fa-4x"></i></BtnRed>
+            <BtnRed body='Linkedin'><i class="fa fa-linkedin fa-4x"></i></BtnRed>
         </div>
     </main>
-    <SectionContent title='Experiencia Laboral'>
+    <SectionContent title='Experiencia Laboral' icon='fa-address-book'>
         <ExpLaboral
             cargo='Desarrollador Fullstack'
             lugar='en Altamira Tecnology'
@@ -50,15 +56,15 @@ import 'normalize.css'
             índex, seguimiento a slow_query_log, tareas programadas, etc.
         </ExpLaboral>
     </SectionContent>
-    <SectionContent title='Proyectos'>
+    <SectionContent title='Proyectos' icon='fa-briefcase'>
         <Proyecto
             title='CRUD Básico'
             imagen='./svgl 1.png'
             herramientas='HTML,CSS,JavaScript,JWT'
             credenciales='Admin,2321'
             links={[
-                { icon: '', item: 'Código Fuente', url: '' },
-                { icon: '', item: 'Demo', url: '' }
+                { icon: 'fa-github', item: 'Código Fuente', url: '' },
+                { icon: 'fa-internet-explorer', item: 'Demo', url: '' }
             ]}
         >
             Es una aplicación básica que representa las funciones principales en
@@ -66,7 +72,7 @@ import 'normalize.css'
         </Proyecto>
     </SectionContent>
 
-    <SectionContent title='Habilidades Actuales'>
+    <SectionContent title='Habilidades Actuales' icon='fa-graduation-cap'>
         <HabilidadesIn
             title='FrontEnd'
             items={[
@@ -104,40 +110,12 @@ import 'normalize.css'
             ]}
         />
     </SectionContent>
-    <section class='text-white container mx-auto p-1 px-4 text-center'>
-        <h2 class='text-3xl font-bold text-white mb-8'>
-            Esta página WEB es realizo con:
-        </h2>
-        <div class='content !flex flex-wrap justify-center items-center'>
-            <div
-                class='py-3 my-[25px] mx-[15px] bg-white rounded !w-[100px] !h-[130px] !flex justify-between items-center flex-col'
-            >
-                <img
-                    src='/image 3.png'
-                    alt='imagen'
-                    class='w-[50px] h-[50px]'
-                />
-                <p class='text-slate-700 font-bold text-base'>HTML 5</p>
-            </div>
-        </div>
-        <div class='w-full !flex justify-center items-center my-5'>
-            <BtnOutline body='Revisar Código' />
-        </div>
-    </section>
+    <SectionWith
+        title='Esta página WEB es realizo con:'
+        items={[
+            { title: 'HTML 5', image: './image 3.png' },
+            { title: 'HTML 5', image: './image 3.png' }
+        ]}
+        url=''
+    />
 </Layout>
-
-<style>
-    /* main {
-        padding: 1rem;
-        color: white;
-        font-size: 20px;
-        line-height: 1.6;
-    } */
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
-</style>
