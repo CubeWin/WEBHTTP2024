@@ -1,0 +1,21 @@
+---
+interface Props {
+    title: string
+    image: string
+    bg: string
+    border: string
+    color: string
+}
+
+const { image, title, bg, border, color } = Astro.props
+const hasBorder = border ? `border-2 border-opacity-10 ${border}` : ''
+const hasBg = bg ? bg : 'bg-transparent'
+---
+
+<div
+    class=`py-3 my-[25px] mx-[15px] !w-[100px] !h-[130px] rounded-lg !flex justify-between items-center
+    flex-col ${hasBorder} ${hasBg} ${color}`
+>
+    <img src={image} alt=`image-${title}` class='w-[50px] h-[50px]' />
+    <p class='font-bold text-base'>{title}</p>
+</div>

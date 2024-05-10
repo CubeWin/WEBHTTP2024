@@ -1,47 +1,64 @@
 ---
-import Tag from '../components/Tag.astro'
-import TagLink from '../components/TagLink.astro'
 import DetalleProyecto from '../components/DetalleProyecto.astro'
+import LinksProyecto from '../components/LinksProyecto.astro'
+
+interface Items {
+    icon: string
+    item: string
+    url: string
+}
+
+interface Props {
+    title: string
+    imagen: string
+    herramientas: string
+    credenciales: string
+    links: Array<Items>
+}
+
+const { title, imagen, herramientas, credenciales, links } =
+    Astro.props
 ---
 
 <div class='!grid grid-cols-1 gap-4 mb-10'>
-    <img class='!w-full !h-auto' src='/svgl 1.png' alt='image' />
+    <img class='!w-full !h-auto' src={imagen} alt=`image-${title}` />
     <div class=''>
-        <h3 class='text-2xl font-bold mb-2'>CRUD Básico</h3>
+        <h3 class='text-2xl font-bold mb-2'>{title}</h3>
         <p class='mb-2'>
-            Es una aplicación básica que representa las funciones principales en
-            un desarrollo de sistemas: "create, register, update and delete".
+            <slot />
         </p>
-        <DetalleProyecto
-            bg='bg-red-700'
-            color='text-white'
-            items='HTML,CSS,JavaScript,JWT'
-            title='Herramientas'
-        />
-        <DetalleProyecto
-            bg='bg-sky-500'
-            color='text-white'
-            items='Admin,2321'
-            title='Credenciales'
-        />
-        <div class='Links'>
-            <h4 class='font-semibold'>Links:</h4>
-            <div class='!flex gap-2 my-2'>
-                <TagLink
+        {
+            herramientas && (
+                <DetalleProyecto
+                    title='Herramientas'
+                    bg='bg-red-700'
+                    color='text-white'
+                    items={herramientas}
+                />
+            )
+        }
+
+        {
+            credenciales && (
+                <DetalleProyecto
+                    title='Credenciales'
+                    bg='bg-sky-500'
+                    color='text-white'
+                    items={credenciales}
+                />
+            )
+        }
+
+        {
+            links.length > 0 && (
+                <LinksProyecto
+                    title='Links:'
                     bg='bg-sky-500'
                     border='border-sky-500'
                     color='text-white'
-                    text='Código Fuente'
-                    url=''
+                    items={links}
                 />
-                <TagLink
-                    bg='bg-sky-500'
-                    border='border-sky-500'
-                    color='text-white'
-                    text='Demo'
-                    url=''
-                />
-            </div>
-        </div>
+            )
+        }
     </div>
 </div>

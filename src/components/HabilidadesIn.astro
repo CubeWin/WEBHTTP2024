@@ -1,0 +1,36 @@
+---
+import CardSkill from './CardSkill.astro'
+
+interface Items {
+    title: string
+    image: string
+}
+
+interface Props {
+    title: string
+    items: Array<Items>
+}
+
+const { title, items } = Astro.props
+---
+
+<div
+    class='bg-white bg-opacity-10 rounded-lg px-3 py-2 mb-10
+    shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)]'
+>
+    <h3 class='font-semibold text-2xl mb-5'>{title}</h3>
+    <div class='content !flex flex-wrap justify-start items-center'>
+        {
+            items.length > 0 &&
+                items.map((item) => (
+                    <CardSkill
+                        title={item.title}
+                        image={item.image}
+                        bg='bg-transparent'
+                        border='border-neutral-50'
+                        color='text-white'
+                    />
+                ))
+        }
+    </div>
+</div>

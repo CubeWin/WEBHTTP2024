@@ -1,0 +1,36 @@
+---
+import TagLink from '../components/TagLink.astro'
+
+interface Items {
+    icon: string
+    item: string
+    url: string
+}
+
+interface Props {
+    title: string
+    bg: string
+    color: string
+    border: string
+    items: Array<Items>
+}
+const { title, items, bg, color, border } = Astro.props
+---
+
+<div>
+    <h4 class='font-semibold'>{title}</h4>
+    <div class='flex gap-2 my-2'>
+        {
+            items.map((i) => (
+                <TagLink
+                    bg={bg}
+                    color={color}
+                    text={i.item}
+                    border={border}
+                    url={i.url}
+                    icon={i.icon}
+                />
+            ))
+        }
+    </div>
+</div>

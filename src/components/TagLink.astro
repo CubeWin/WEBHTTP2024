@@ -5,9 +5,10 @@ interface Props {
     border: string
     text: string
     url: string
+    icon: string
 }
 
-const { bg, color, text, border, url } = Astro.props
+const { bg, color, text, border, url, icon } = Astro.props
 ---
 
 <a
@@ -16,5 +17,6 @@ const { bg, color, text, border, url } = Astro.props
     font-semibold !flex justify-center items-center`
     href=`${url}`
 >
+    {!!icon && <i class={icon} />}
     {text}
 </a>
