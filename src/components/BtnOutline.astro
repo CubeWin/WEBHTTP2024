@@ -14,6 +14,6 @@ const { body, url, icon } = Astro.props
           active:ring-4 active:ring-yellow-500 active:ring-opacity-60'
     href={url}
 >
-    {icon && <><i class=`fa ${icon}` />&nbsp;</>} {body}
+    {icon && <><i class={`fa ${icon}`} />&nbsp;</>} {body}
 </a>
 

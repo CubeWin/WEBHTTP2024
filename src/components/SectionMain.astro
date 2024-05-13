@@ -1,0 +1,70 @@
+---
+import BtnRed from './BtnRed.astro'
+import BtnOutline from './BtnOutline.astro'
+
+interface Items {
+    body: string
+    icon: string
+    urlLink: string
+}
+
+interface Props {
+    nombre: string
+    especialidad: string
+    pais: string
+    ciudad: string
+    netLinks: Array<Items>
+    cvLink: string
+}
+const { nombre, especialidad, ciudad, pais, netLinks, cvLink } = Astro.props
+---
+
+<section
+    class='text-left container mx-auto px-10 pb-10 text-white text-xl min-h-screen
+    flex flex-col justify-center'
+>
+    <div class='grid md:grid-cols-2 gap-4'>
+        <div>
+            <h1 class='text-5xl font-bold'>
+                <span class='block'>Hola,</span>
+                <span
+                    class='block text-7xl py-5 bg-clip-text text-transparent bg-gradient-to-r
+                    from-amber-600 from-0% via-yellow-500 via-30% to-yellow-500 to-90%'
+                >
+                    Soy {nombre}
+                </span>
+                <span class='block text-3xl'>{especialidad}</span>
+                <span class='block text-2xl font-normal'>{pais} - {ciudad}</span
+                >
+            </h1>
+            <p>
+                <slot />
+            </p>
+        </div>
+        <div class="items-center justify-end hidden md:flex">
+            <picture>
+                <img src='./smeliud.webp' alt='Identidad' class='rounded-lg retrato__image opacity-90' />
+            </picture>
+        </div>
+    </div>
+    <div class='w-full !flex justify-center items-center mt-10'>
+        <BtnOutline body='Curriculúm Vitae' url={cvLink} icon='fa-file-text' />
+    </div>
+    <div class='!flex justify-center items-center flex-wrap gap-8 mt-10'>
+        {
+            netLinks.length > 0 &&
+                netLinks.map((netLink) => (
+                    <BtnRed body={netLink.body} urlLink={netLink.urlLink}>
+                        <i class={'fa ' + netLink.icon + ' fa-4x'} />
+                    </BtnRed>
+                ))
+        }
+        <!--`fa ${netLink.icon} fa-4x` -->
+    </div>
+</section>
+
+<style>
+    .retrato__image{
+        transform: rotateY(180deg);
+    }
+</style>

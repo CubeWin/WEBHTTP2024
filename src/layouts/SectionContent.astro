@@ -7,9 +7,9 @@ interface Props {
 const { title, icon } = Astro.props
 ---
 
-<section class='text-white container mx-auto p-1 px-4'>
+<section class='text-white container mx-auto p-1 px-4 pb-10'>
     <h2 class='text-3xl font-bold text-yellow-500 mb-8'>
-        {!!icon && <><i class=`fa ${icon}`></i>&nbsp;</>}
+        {!!icon && <><i class={`fa ${icon}`}></i>&nbsp;</>}
         {title}
     </h2>
     <slot />

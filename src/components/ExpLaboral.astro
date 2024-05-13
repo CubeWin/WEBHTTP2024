@@ -13,11 +13,17 @@ const {  cargo, lugar, tiempo } = Astro.props
             dark:before:border-white/15 before:content-[""]'
 >
   <span class='bg-yellow-500 -left-[41px] top-2 absolute rounded-full !h-[15px] !w-[15px]'></span>
-  <div class='mb-2'>
-    <h3 class='!inline text-xl'><span class='!inline font-bold'>{cargo}</span> {lugar}</h3>
-    <span class='italic'>{tiempo}</span>
+  <div class="md:grid md:grid-cols-2 lg:grid-cols-5 lg:gap-4 md:gap-1 mb:pb-5 lg:pb-10">
+    <div class='mb-2 lg:col-span-2'>
+      <h3 class='inline text-xl'>
+        <span class='inline md:block font-bold text-2xl'>
+          {cargo}
+        </span> {lugar}
+      </h3>
+      <p class='italic mt-2 sm:mt-0 '>{tiempo}</p>
+    </div>
+    <p class='pb-5 lg:col-span-3'>
+      <slot />
+    </p>
   </div>
-  <p class='pb-5'>
-    <slot />
-  </p>
 </div>

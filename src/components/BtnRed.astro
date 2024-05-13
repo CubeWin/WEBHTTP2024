@@ -1,25 +1,18 @@
 ---
 interface Props {
-  body: string
+    body: string
+    urlLink: string
 }
 
-const { body } = Astro.props
+const { body, urlLink } = Astro.props
 ---
 
 <a
-  class='flex justify-center items-center flex-col w-[110px] h-[120px] bg-white bg-opacity-10 text-white rounded-lg text-base font-bold cursor-pointer
+    class='flex justify-center items-center flex-col w-[110px] h-[120px] bg-white bg-opacity-10 text-white rounded-lg text-base font-bold cursor-pointer
           transition-all duration-500 ease-in-out hover:shadow-[-6px_-6px_12px_rgba(0,0,0,0.4),8px_8px_16px_rgba(86,131,180,0.6)] hover:bg-transparent
           active:ring-4 active:ring-yellow-500 active:ring-opacity-60'
+    href={urlLink ? urlLink : '#'}
 >
-  <slot />
-  <p>{body}</p>
+    <slot />
+    <p>{body}</p>
 </a>
-
-<style></style>
-<!-- shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)]
-  
-relative mx-12 pb-12 grid before:absolute before:left-[-35px]
-before:block before:h-full before:border-l-2 before:border-black/20
-dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]
-
--->
