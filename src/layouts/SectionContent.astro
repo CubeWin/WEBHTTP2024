@@ -2,12 +2,13 @@
 interface Props {
     title: string
     icon: string
+    id: string
 }
 
-const { title, icon } = Astro.props
+const { title, icon, id } = Astro.props
 ---
 
-<section class='text-white container mx-auto p-1 px-4 pb-10'>
+<section id={id} class='text-white container mx-auto p-1 px-4 pb-10'>
     <h2 class='text-3xl font-bold text-yellow-500 mb-8'>
         {!!icon && <><i class={`fa ${icon}`}></i>&nbsp;</>}
         {title}
