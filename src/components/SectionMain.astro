@@ -22,14 +22,15 @@ const { nombre, especialidad, ciudad, pais, netLinks, cvLink } = Astro.props
 <section
     class='text-left container mx-auto px-10 pb-10 text-white text-xl min-h-screen
     flex flex-col justify-center'
+    id="inicio"
 >
-    <div class='mt-12 lg:mt-0 grid md:grid-cols-2 gap-4'>
+    <div class='mt-16 lg:mt-0 grid md:grid-cols-2 gap-4'>
         <div>
             <h1 class='text-5xl font-bold'>
-                <span class='block'>Hola,</span>
+                <span class='block font-["Audiowide"]'>Hola,</span>
                 <span
-                    class='block text-7xl py-5 bg-clip-text text-transparent bg-gradient-to-r
-                    from-amber-600 from-0% via-yellow-500 via-30% to-yellow-500 to-90%'
+                    class='block font-["Audiowide"] text-7xl py-5 bg-clip-text text-transparent bg-gradient-to-r
+                    from-amber-600 from-0% via-yellow-500 via-30%  to-yellow-500 to-90%'
                 >
                     Soy {nombre}
                 </span>

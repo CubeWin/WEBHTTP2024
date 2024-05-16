@@ -1,11 +1,17 @@
 ---
-function HalRed(name: string) {
-    return console.log(name)
+interface Items {
+    navItem: string
+    icon: string
 }
+
+interface Props {
+    navList: Array<Items>
+}
+const { navList } = Astro.props
 ---
 
 <header
-    class='bg-transparent text-white transition-all ease-in-out duration-500
+    class='fixed w-full z-30 bg-black/10 backdrop-blur-md text-white transition-all ease-in-out duration-500
     hover:bg-white hover:bg-opacity-10'
 >
     <nav
@@ -13,14 +19,14 @@ function HalRed(name: string) {
         aria-label='Global'
     >
         <div class='flex lg:flex-1'>
-            <a href='#' class='-m-1.5 p-1.5 flex gap-4 items-center'>
+            <a class='-m-1.5 p-1.5 flex gap-4 items-center'>
                 <img
                     class='h-8 w-auto'
                     src='./liu.cube.svg'
-                    alt=''
+                    alt='Logo imagen'
                     style='height: 50px'
                 />
-                <span class='not-sr-only'>LiU Cube</span>
+                <span class='not-sr-only font-["Audiowide"] text-2xl'>LiU Cube</span>
             </a>
         </div>
         <div class='flex lg:hidden'>
@@ -46,33 +52,22 @@ function HalRed(name: string) {
             </button>
         </div>
         <div class='hidden lg:flex lg:gap-x-12'>
-            <a
-                href='#'
-                class='font-semibold leading-6 rounded-md hover:bg-slate-950 border-b-2
-                border-transparent transition-all ease-in-out duration-300 text-md uppercase
-                hover:bg-opacity-10 hover:border-b-2 hover:border-white p-5'
-            >
-                Features
-            </a>
-            <a
-                href='#'
-                class='font-semibold leading-6 rounded-md hover:bg-slate-950 border-b-2
-                border-transparent transition-all ease-in-out duration-300 text-md uppercase
-                hover:bg-opacity-10 hover:border-b-2 hover:border-white p-5'
-            >
-                Marketplace
-            </a>
-            <a
-                href='#'
-                class='font-semibold leading-6 rounded-md hover:bg-slate-950 border-b-2
-                border-transparent transition-all ease-in-out duration-300 text-md uppercase
-                hover:bg-opacity-10 hover:border-b-2 hover:border-white p-5'
-            >
-                Company
-            </a>
+            {
+                navList.length > 0 &&
+                    navList.map((item) => (
+                        <a
+                            href={`#${item.navItem}`}
+                            class='font-semibold leading-6 rounded-md hover:bg-slate-950 border-b-2
+                            border-transparent transition-all ease-in-out duration-300 text-md uppercase
+                            hover:bg-opacity-10 hover:border-b-2 hover:border-white p-5'
+                        >
+                            {item.icon && <i class={`fa ${item.icon} mr-1`} />}
+                            {item.navItem}
+                        </a>
+                    ))
+            }
         </div>
     </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
     <div
         class='fixed z-20 w-full h-screen top-0 -right-full overflow-hidden lg:hidden
         transition-all duration-500 ease-in-out'
@@ -80,7 +75,6 @@ function HalRed(name: string) {
         role='dialog'
         aria-modal='true'
     >
-        <!-- Background backdrop, show/hide based on slide-over state. -->
         <div
             id='bgNav'
             class='absolute inset-0 z-10 transition-colors duration-700 ease-in-out bg-opacity-50 backdrop-blur-sm'
@@ -95,7 +89,11 @@ function HalRed(name: string) {
             >
                 <a href='#' class='-m-1.5 p-1.5'>
                     <span class='sr-only'>Your Company</span>
-                    <img class='h-8 w-auto' src='./liu.cube.svg' alt='' />
+                    <img
+                        class='h-8 w-auto'
+                        src='./liu.cube.svg'
+                        alt='logo icon'
+                    />
                 </a>
                 <button
                     type='button'
@@ -121,27 +119,21 @@ function HalRed(name: string) {
             <div class='mt-6 flow-root px-6 pb-6'>
                 <div class='-my-6 divide-y divide-gray-300/10'>
                     <div class='space-y-2 py-6'>
-                        <a
-                            class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7
-                            text-white hover:bg-black/10'
-                            ref-button='experiencia'
-                        >
-                            Experiencia
-                        </a>
-                        <a
-                            class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7
-                            text-white hover:bg-black/10'
-                            ref-button='proyectos'
-                        >
-                            Proyectos
-                        </a>
-                        <a
-                            class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7
-                            text-white hover:bg-black/10'
-                            ref-button='habilidades'
-                        >
-                            Habilidades
-                        </a>
+                        {
+                            navList.length > 0 &&
+                                navList.map((item) => (
+                                    <a
+                                        class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7
+                                        text-white hover:bg-black/10 uppercase cursor-pointer'
+                                        ref-button={item.navItem}
+                                    >
+                                        {item.icon && (
+                                            <i class={`fa ${item.icon} mr-1`} />
+                                        )}
+                                        {item.navItem}
+                                    </a>
+                                ))
+                        }
                     </div>
                 </div>
             </div>
@@ -150,17 +142,11 @@ function HalRed(name: string) {
 </header>
 <script>
     function openNavMob() {
-        console.log('Button click')
-        // document.getElementById('navMobile')?.classList.remove('hidden')
-        // document.getElementById('navMobile')?.classList.remove('-right-full')
         document.getElementById('navMobile')?.classList.add('!right-0')
         document.getElementById('bgNav')?.classList.add('bg-gray-600')
-        // document.querySelector('body')?.classList.add('overflow-hidden')
     }
 
     function closeNavMob() {
-        console.log('Button click Close')
-        // document.getElementById('navMobile')?.classList.add('hidden')
         document.getElementById('navMobile')?.classList.remove('!right-0')
         document.getElementById('bgNav')?.classList.remove('bg-gray-600')
     }
