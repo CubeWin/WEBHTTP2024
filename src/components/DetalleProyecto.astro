@@ -12,7 +12,7 @@ const listItems = items.split(',')
 
 <div>
     <h4 class='font-semibold inline'>{title}</h4>
-    <div class='flex gap-2 my-2'>
+    <div class='flex flex-wrap gap-2 my-2'>
         {listItems.map((item) => <Tag bg={bg} color={color} text={item} />)}
     </div>
 </div>

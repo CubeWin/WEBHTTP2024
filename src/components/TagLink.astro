@@ -16,7 +16,8 @@ const { bg, color, text, border, url, icon } = Astro.props
     transition-colors duration-500 ease-in-out ${color} text-sm
     font-semibold !flex justify-center items-center`
     href={url}
+    target="_blank"
 >
-    {icon && <><i class=`fa ${icon}`></i>&nbsp;</>}
+    {icon && <><i class={`fa ${icon}`}></i>&nbsp;</>}
     {text}
 </a>

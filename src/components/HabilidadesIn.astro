@@ -14,19 +14,22 @@ interface Props {
 const { title, items } = Astro.props
 ---
 
-<div
+<!-- <div
     class='bg-white bg-opacity-10 rounded-lg px-3 py-2 mb-10
     shadow-[-6px_-6px_12px_rgba(86,131,180,0.6),8px_8px_16px_rgba(0,0,0,0.4)]'
+> -->
+<div
+class='rounded-lg px-5 py-2 mb-10 border-2 border-white/10'
 >
     <h3 class='font-semibold text-2xl mb-5'>{title}</h3>
-    <div class='content !flex flex-wrap justify-start items-center'>
+    <div class='flex flex-wrap justify-center items-center'>
         {
             items.length > 0 &&
                 items.map((item) => (
                     <CardSkill
                         title={item.title}
                         image={item.image}
-                        bg='bg-transparent'
+                        bg='bg-gradient-to-br from-[#ffffff]/40 via-[#e2e2e2]/30 to-[#0a0813]/30'
                         border='border-neutral-50'
                         color='text-white'
                     />
