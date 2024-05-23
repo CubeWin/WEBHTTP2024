@@ -46,21 +46,21 @@ import 'normalize.css'
         title='Experiencia Laboral'
         icon='fa-address-book'
     >
-    <ExpLaboral
-        cargo='Consultor SAP BW'
-        lugar='en Altamira Tecnology'
-        tiempo='Diciembre 2023 - Actualmente (5 meses)'
-    >
-        Liderar un equipo de desarrollo, evangelizar conceptos claves para
-        un desarrollo robusto y escalable, compartir mi conocimiento para
-        acelerar el crecimiento de los miembros y crear un ambiente de
-        propuestas que mejoren al equipo. Definir el diseño de base de
-        datos, el entorno de desarrollo para el backend y frontend, las
-        políticas para el desarrollo, la distribución de tareas y el
-        despliegue en SAP BTP Cloud Foundry. Asimismo, asistir con la
-        optimización de base de datos MySQL, actualización de estadísticas,
-        índex, seguimiento a slow_query_log, tareas programadas, etc.
-    </ExpLaboral>
+        <ExpLaboral
+            cargo='Consultor SAP BW'
+            lugar='en Altamira Tecnology'
+            tiempo='Diciembre 2023 - Actualmente (5 meses)'
+        >
+            Liderar un equipo de desarrollo, evangelizar conceptos claves para
+            un desarrollo robusto y escalable, compartir mi conocimiento para
+            acelerar el crecimiento de los miembros y crear un ambiente de
+            propuestas que mejoren al equipo. Definir el diseño de base de
+            datos, el entorno de desarrollo para el backend y frontend, las
+            políticas para el desarrollo, la distribución de tareas y el
+            despliegue en SAP BTP Cloud Foundry. Asimismo, asistir con la
+            optimización de base de datos MySQL, actualización de estadísticas,
+            índex, seguimiento a slow_query_log, tareas programadas, etc.
+        </ExpLaboral>
         <ExpLaboral
             cargo='Fullstack SAP BTP'
             lugar='en Altamira Tecnology'
@@ -161,7 +161,7 @@ import 'normalize.css'
         </Proyecto>
         <Proyecto
             title='CRUD Básico'
-            imagen='./curd.png'
+            imagen='./crud.png'
             herramientas='HTML,CSS,JavaScript,PHP,MySQL,JQuery,M.D. Bootstrap,Font Awesome'
             credenciales='Admin,2321'
             links={[
@@ -220,56 +220,89 @@ import 'normalize.css'
         title='Habilidades Actuales'
         icon='fa-graduation-cap'
     >
-        <div class="flex flex-wrap gap-8">
+        <div class='flex flex-wrap gap-8'>
             <HabilidadesIn
                 title='FrontEnd'
                 items={[
-                    { title: 'HTML5', image: './skill/front/html5.svg' },
-                    { title: 'CSS3', image: './skill/front/css3.svg' },
+                    { title: 'HTML5', image: './icons/html5.svg' },
+                    { title: 'CSS3', image: './icons/css3.svg' },
                     {
                         title: 'JavaScript',
-                        image: './skill/front/javascript.svg'
-                    },
-                    {
-                        title: 'Bootstrap',
-                        image: './skill/front/bootstrap.svg'
+                        image: './icons/javascript.svg'
                     },
                     {
                         title: 'Font Awesome',
-                        image: './skill/front/font-awesome.svg'
+                        image: './icons/fontawesome.svg'
                     },
-                    { title: 'P5js', image: './skill/front/p5js.svg' },
-                    { title: 'React JS', image: './skill/front/react.svg' }
+                    { title: 'React JS', image: './icons/react.svg' },
+                    { title: 'Tail wind', image: './icons/tailwindcss.svg' },
+                    { title: 'BEM', image: './icons/bem.svg' },
+                    { title: 'Angular', image: './icons/angular.svg' },
+                    { title: 'Astro', image: './icons/astro.svg' }
                 ]}
             />
             <HabilidadesIn
                 title='BackEnd'
                 items={[
-                    { title: 'Node JS', image: './skill/back/node.svg' },
+                    { title: 'Node JS', image: './icons/nodedotjs.svg' },
                     {
                         title: 'TypeScript',
-                        image: './skill/back/typescript.svg'
-                    }
+                        image: './icons/typescript.svg'
+                    },
+                    { title: 'Express', image: './icons/express.svg' },
+                    { title: 'JWT', image: './icons/jsonwebtokens.svg' },
+                    { title: 'Jest', image: './icons/jest.svg' },
+                    { title: 'Python', image: './icons/python.svg' },
+                    { title: 'Django', image: './icons/django.svg' },
+                    { title: 'Trpc', image: './icons/trpc.svg' },
+                    { title: 'ABAP', image: './icons/sap.svg' }
                 ]}
             />
             <HabilidadesIn
                 title='Base de datos'
                 items={[
-                    { title: 'Mongo DB', image: './skill/db/mongodb.svg' },
-                    { title: 'Mysql', image: './skill/db/mysql.svg' }
+                    { title: 'Mongo DB', image: './icons/mongodb.svg' },
+                    { title: 'Mysql', image: './icons/mysql.svg' },
+                    { title: 'SQL', image: './icons/microsoftsqlserver.svg' },
+                    { title: 'HanaDB', image: './icons/sap.svg' }
                 ]}
             />
             <HabilidadesIn
                 title='Despliegue'
-                items={[{ title: 'Mongo DB', image: './skill/db/mongodb.svg' }]}
+                items={[
+                    { title: 'Git', image: './icons/git.svg' },
+                    { title: 'Git Hub', image: './icons/github.svg' },
+                    {
+                        title: 'Git hub Actions',
+                        image: './icons/githubactions.svg'
+                    },
+                    { title: 'Jenkins', image: './icons/jenkins.svg' },
+                    { title: 'AWS EC2', image: './icons/amazonec2.svg' },
+                    { title: 'AWS S3', image: './icons/amazons3.svg' },
+                    { title: 'Docker', image: './icons/docker.svg' },
+                    { title: 'Kubernetes', image: './icons/kubernetes.svg' },
+                    { title: 'Cloudflare', image: './icons/cloudflare.svg' },
+                    { title: 'Vercel', image: './icons/vercel.svg' },
+                    { title: 'SAP BTP', image: './icons/sap.svg' }
+                ]}
             />
         </div>
     </SectionContent>
     <SectionWith
         title='Esta página WEB se realizó con:'
         items={[
-            { title: 'HTML 5', image: './image 3.png' },
-            { title: 'HTML 5', image: './image 3.png' }
+            { title: 'HTML5', image: './icons/html5.svg' },
+            { title: 'CSS3', image: './icons/css3.svg' },
+            {
+                title: 'JavaScript',
+                image: './icons/javascript.svg'
+            },
+            {
+                title: 'Font Awesome',
+                image: './icons/fontawesome.svg'
+            },
+            { title: 'Astro', image: './icons/astro.svg' },
+            { title: 'Tail wind', image: './icons/tailwindcss.svg' },
         ]}
         url=''
     />
